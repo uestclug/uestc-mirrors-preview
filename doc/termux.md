@@ -1,0 +1,46 @@
+## Termux 镜像使用帮助
+
+### Termux 是什么
+
+> Termux is a terminal emulator and Linux environment bringing powerful terminal access to Android.
+
+Termux 是运行在 Android 上的 terminal。不需要root，运行于内部存储（不在SD卡上）。
+
+自带了一个包管理器，可以安装许多现代化的开发和系统维护工具。比如：
+
+- neovim
+- tmux
+- zsh
+- clang
+- gcc
+- weechat
+- irssi
+- …
+
+### 如何使用 Termux 镜像
+
+#### 自动替换
+
+使用如下命令自动替换官方源为 UESTC Mirrors 镜像源
+
+```
+sed -i 's@^\(deb.*stable main\)$@#\1\ndeb https://mirrors.uestc.cn/termux stable main@' $PREFIX/etc/apt/sources.list
+apt update && apt upgrade
+```
+
+#### 手动修改
+
+编辑 `$PREFIX/etc/apt/sources.list` 修改为如下内容
+
+```
+# The termux repository mirror from TUNA:
+deb https://mirrors.uestc.cn/termux stable main
+```
+
+请使用内置或安装在 Termux 里的文本编辑器，例如 vi / vim / nano 等，不要使用 RE 管理器等其他具有 ROOT 权限的外部 APP 来修改 Termux 的文件
+
+### 报错与修复
+
+在Android P上使用TUNA源在upgrade的时候会出现报错 `bash CANNOT LINK EXECUTABLE "dpkg-deb": library "libz.so.1" not found dpkg: error processing archive` 此时退出 termux的进程，重新打开并pkg up即可修复。
+
+也可能出现以下报错 `bash CANNOT LINK EXECUTABLE "/data/data/com.termux/files/usr/lib/apt/methods/https": library "libnghttp2.so" not found CANNOT LINK EXECUTABLE "/data/data/com.termux/files/usr/lib/apt/methods/https": library "libnghttp2.so" not found` 并且卡进度条，此时退出termux的进程,重新打开，并运行 `dpkg --configure -a` 即可修复。
