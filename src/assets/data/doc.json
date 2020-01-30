@@ -1,0 +1,252 @@
+{
+  "app": [
+    {
+      "name": "Adobe Fonts",
+      "id": "adobe-fonts",
+      "icon": "adobe",
+      "url": "adobe-fonts"
+    },
+    {
+      "name": "Anthon",
+      "id": "anthon",
+      "url": "anthon"
+    },
+    {
+      "name": "F-droid",
+      "id": "anthon",
+      "icon": "cellphone-android",
+      "url": "f-droid"
+    },
+    {
+      "name": "GNU",
+      "id": "gnu",
+      "url": "gnu"
+    },
+    {
+      "name": "Nginx",
+      "id": "nginx",
+      "url": "nginx"
+    },
+    {
+      "name": "NodeJs",
+      "icon": "nodejs",
+      "id": "nodejs-release",
+      "url": "nodejs-release"
+    },
+    {
+      "name": "NodeJs Source",
+      "icon": "nodejs",
+      "id": "nodesource",
+      "url": "nodesource"
+    }
+  ],
+  "linux": [
+    {
+      "name": "Alpine",
+      "id": "alpine",
+      "dist_url": [
+        {
+          "name": "Repo",
+          "type": "repo",
+          "url": "alpine"
+        }
+      ]
+    },
+    {
+      "name": "Arch Linux",
+      "id": "archlinux",
+      "icon": "arch",
+      "dist_url": [
+        {
+          "name": "Repo",
+          "type": "repo",
+          "url": "archlinux"
+        },
+        {
+          "name": "Archlinux CN",
+          "type": "repo",
+          "url": "archlinuxcn"
+        },
+        {
+          "name": "CK Repo",
+          "type": "repo",
+          "url": "repo-ck"
+        }
+      ]
+    },
+    {
+      "name": "Centos",
+      "id": "centos",
+      "icon": "centos",
+      "dist_url": [
+        {
+          "name": "Repo",
+          "type": "repo",
+          "url": "centos"
+        }
+      ]
+    },
+    {
+      "name": "Debian",
+      "id": "debian",
+      "icon": "debian",
+      "dist_url": [
+        {
+          "name": "ISO",
+          "type": "iso",
+          "url": "debian-cd"
+        },
+        {
+          "name": "Repo",
+          "type": "repo",
+          "url": "debian"
+        },
+        {
+          "name": "Security",
+          "type": "repo",
+          "url": "debian-security"
+        }
+      ]
+    },
+    {
+      "name": "Deepin",
+      "id": "deepin",
+      "dist_url": [
+        {
+          "name": "Repo",
+          "type": "repo",
+          "url": "deepin"
+        }
+      ]
+    },
+    {
+      "name": "Fedora",
+      "id": "fedora",
+      "icon": "fedora",
+      "dist_url": [
+        {
+          "name": "Repo",
+          "type": "repo",
+          "url": "fedora"
+        }
+      ]
+    },
+    {
+      "name": "Kali",
+      "id": "kali",
+      "dist_url": [
+        {
+          "name": "ISO",
+          "type": "iso",
+          "url": "kali-images"
+        },
+        {
+          "name": "Repo",
+          "type": "repo",
+          "url": "kali"
+        }
+      ]
+    },
+    {
+      "name": "Linux Mint",
+      "id": "mint",
+      "icon": "linux-mint",
+      "dist_url": [
+        {
+          "name": "Repo",
+          "type": "repo",
+          "url": "mint"
+        }
+      ]
+    },
+    {
+      "name": "Manjaro",
+      "id": "manjaro",
+      "dist_url": [
+        {
+          "name": "Repo",
+          "type": "repo",
+          "url": "manjaro"
+        }
+      ]
+    },
+    {
+      "name": "OpenSUSE",
+      "id": "opensuse",
+      "dist_url": [
+        {
+          "name": "Repo",
+          "type": "repo",
+          "url": "opensuse"
+        }
+      ]
+    },
+    {
+      "name": "OpenWRT",
+      "id": "openwrt",
+      "dist_url": [
+        {
+          "name": "Repo",
+          "type": "repo",
+          "url": "openwrt"
+        }
+      ]
+    },
+    {
+      "name": "Proxmox",
+      "id": "proxmox",
+      "dist_url": [
+        {
+          "name": "Repo",
+          "type": "repo",
+          "url": "proxmox"
+        }
+      ]
+    },
+    {
+      "name": "Raspbian",
+      "id": "raspbian",
+      "icon": "raspberry-pi",
+      "dist_url": [
+        {
+          "name": "Repo",
+          "type": "repo",
+          "url": "raspbian"
+        }
+      ]
+    },
+    {
+      "name": "Termux",
+      "id": "termux",
+      "dist_url": [
+        {
+          "name": "Repo",
+          "type": "repo",
+          "url": "termux"
+        }
+      ]
+    },
+    {
+      "name": "Ubuntu",
+      "id": "ubuntu",
+      "icon": "ubuntu",
+      "dist_url": [
+        {
+          "name": "ISO",
+          "type": "iso",
+          "url": "ubuntu-cdimage"
+        },
+        {
+          "name": "Releases ISO",
+          "type": "iso",
+          "url": "ubuntu-releases"
+        },
+        {
+          "name": "Repo",
+          "type": "repo",
+          "url": "ubuntu"
+        }
+      ]
+    }
+  ]
+}
