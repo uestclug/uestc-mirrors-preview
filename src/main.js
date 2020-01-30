@@ -11,7 +11,7 @@ import VueShowdown from "vue-showdown";
 
 import axios from "axios";
 
-axios.defaults.baseURL = "http://localhost:8080/";
+axios.defaults.baseURL = "/";
 
 Vue.prototype.$ajax = axios;
 
