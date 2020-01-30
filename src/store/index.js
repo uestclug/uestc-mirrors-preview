@@ -3,12 +3,6 @@ import Vuex from "vuex";
 
 Vue.use(Vuex);
 
-import axios from "axios";
-
-axios.defaults.baseURL = "http://localhost:8080/data/";
-
-Vue.prototype.$ajax = axios;
-
 export default new Vuex.Store({
   actions: {},
   modules: {},

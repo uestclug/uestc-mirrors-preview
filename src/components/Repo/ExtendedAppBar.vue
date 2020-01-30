@@ -12,14 +12,7 @@
       <v-icon>mdi-{{ repo.icon }}</v-icon> &nbsp;
       <span>{{ repo.name }}</span>
     </v-toolbar-title>
-    <v-text-field
-      flat
-      solo-inverted
-      hide-details
-      prepend-inner-icon="mdi-magnify"
-      label="客官, 今天想来点什么?"
-      class="hidden-sm-and-down"
-    />
+    <Search/>
     <v-spacer />
     <v-btn icon>
       <v-icon>mdi-apps</v-icon>
@@ -31,21 +24,20 @@
       <v-icon>mdi-palette</v-icon>
     </v-btn>
     <template v-slot:extension>
-      <v-tabs align-with-title background-color="primary">
-        <v-tab href="#tab-home">简介</v-tab>
-        <v-tab
-          :href="'#tab-' + dists.url"
-          v-for="dists in repo.dist_url"
-          :key="dists.url"
-          >{{ dists.name }}</v-tab
-        >
-      </v-tabs>
+      <v-btn color="primary" dark absolute bottom right fab to="/downloadiso">
+        <v-icon>mdi-download</v-icon>
+      </v-btn>
+      <slot name="tabcontent" />
     </template>
   </v-app-bar>
 </template>
 <script>
+import Search from '@/components/layout/Search'
 export default {
   name: "AppBar",
+  components: {
+      Search
+  },
   data() {
     return {
       color: "#1CA085"

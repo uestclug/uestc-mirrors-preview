@@ -4,14 +4,6 @@
     <v-toolbar-title style="width: 300px" class="ml-0 pl-4">
       <span>UESTC Mirrors</span>
     </v-toolbar-title>
-    <!-- <v-text-field
-      flat
-      solo-inverted
-      hide-details
-      prepend-inner-icon="mdi-magnify"
-      label="客官, 今天想来点什么?"
-      class="hidden-sm-and-down"
-    /> -->
     <Search />
     <v-spacer />
     <v-btn icon>

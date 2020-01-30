@@ -3,7 +3,11 @@
     <MainAppBar />
     <v-content>
       <v-container class="fill-height" fluid>
-        <ISOWizard />
+        <v-row>
+          <v-col cols="12">
+            <ISOWizard />
+          </v-col>
+        </v-row>
       </v-container>
     </v-content>
   </div>
