@@ -1,5 +1,7 @@
 <template>
   <v-autocomplete
+    v-model="searched"
+    return-object
     flat
     :items="dists"
     item-text="name"
@@ -22,7 +24,7 @@
         color="indigo"
         class="headline font-weight-light white--text"
       >
-      <v-icon>mdi-{{icon(item.icon)}}</v-icon>
+        <v-icon>mdi-{{ icon(item.icon) }}</v-icon>
       </v-list-item-avatar>
       <v-list-item-content>
         <v-list-item-title v-text="item.name"></v-list-item-title>
@@ -38,7 +40,8 @@
 import dists from "@/assets/data/dir.json";
 export default {
   data: () => ({
-    dists: dists
+    dists: dists,
+    searched: null
   }),
   methods: {
     icon: function(dist) {
@@ -47,6 +50,11 @@ export default {
       } else {
         return "package-variant-closed";
       }
+    }
+  },
+  watch: {
+    searched() {
+      this.$router.push("/" + this.searched.info + "/" + this.searched.name);
     }
   }
 };

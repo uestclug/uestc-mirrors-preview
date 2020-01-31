@@ -106,12 +106,12 @@ export default {
     repo: repo
   }),
   methods: {
-    checkicon: function(icon){
-        if(typeof icon != 'undefined'){
-            return icon
-        }else{
-            return 'package-variant-closed'
-        }
+    checkicon: function(icon) {
+      if (typeof icon != "undefined") {
+        return icon;
+      } else {
+        return "package-variant-closed";
+      }
     }
   },
   computed: {

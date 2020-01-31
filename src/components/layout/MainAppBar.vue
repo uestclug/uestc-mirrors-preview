@@ -18,11 +18,11 @@
   </v-app-bar>
 </template>
 <script>
-import Search from '@/components/layout/Search'
+import Search from "@/components/layout/Search";
 export default {
   name: "AppBar",
   components: {
-      Search
+    Search
   },
   data() {
     return {

@@ -15,7 +15,7 @@
           <v-btn color="primary" large outlined to="browse"
             ><v-icon>mdi-folder</v-icon>浏览目录</v-btn
           >
-                    <v-btn color="primary" large outlined to="downloadiso"
+          <v-btn color="primary" large outlined to="downloadiso"
             ><v-icon>mdi-album</v-icon>下载ISO</v-btn
           >
         </v-card-actions>
@@ -37,11 +37,11 @@
     </v-col>
     <v-col cols="12" md="8">
       <v-row>
-          <DistInfo
-            v-for="repo_item in dists"
-            :key="repo_item.name"
-            :dist="repo_item"
-          />
+        <DistInfo
+          v-for="repo_item in dists"
+          :key="repo_item.name"
+          :dist="repo_item"
+        />
       </v-row>
     </v-col>
     <NewsView />
@@ -51,7 +51,7 @@
 import NewsView from "@/components/Home/NewsView";
 import DistInfo from "@/components/Home/DistInfo";
 
-import dists from "@/assets/data/dir.json"
+import dists from "@/assets/data/dir.json";
 
 export default {
   components: {

@@ -2,7 +2,6 @@
   <v-app>
     <NavigationDrawer app />
     <router-view></router-view>
-    <!-- <v-footer app> </v-footer> -->
     <ColorPicker app />
   </v-app>
 </template>

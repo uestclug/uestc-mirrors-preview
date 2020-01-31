@@ -2,7 +2,13 @@
   <div>
     <ExtendedAppBar :repo="thisrepo">
       <template v-slot:tabcontent>
-        <v-tabs show-arrows align-with-title center-active background-color="primary" v-model="tab">
+        <v-tabs
+          show-arrows
+          align-with-title
+          center-active
+          background-color="primary"
+          v-model="tab"
+        >
           <v-tab href="#tab-home">简介</v-tab>
           <v-tab
             :href="'#tab-' + dists.url"
@@ -11,6 +17,9 @@
             >{{ dists.name }}</v-tab
           >
         </v-tabs>
+        <v-btn color="primary" dark absolute bottom right fab to="/downloadiso">
+          <v-icon>mdi-download</v-icon>
+        </v-btn>
       </template>
     </ExtendedAppBar>
     <v-content>
@@ -55,6 +64,11 @@ export default {
       return repo.linux.find(obj => {
         return obj.id === str;
       });
+    }
+  },
+  mounted: function() {
+    if (typeof this.$route.params.tab != "undefined") {
+      this.tab = "tab-" + this.$route.params.tab;
     }
   }
 };

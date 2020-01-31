@@ -1,11 +1,7 @@
 <template>
   <modal name="color-picker-ui" :adaptive="true" height="192" app>
     <div>
-      <swatches
-        :close-on-select="true"
-        v-model="color" 
-        inline
-      />
+      <swatches :close-on-select="true" v-model="color" inline />
     </div>
   </modal>
 </template>

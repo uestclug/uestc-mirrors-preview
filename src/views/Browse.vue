@@ -2,13 +2,17 @@
   <div>
     <MainAppBar />
     <v-content>
-      <v-container class="fill-height" fluid>
+      <v-container fluid>
         <v-row>
           <v-col cols="12">
             <v-list subheader class="mx-auto" dense>
               <v-subheader inset>镜像列表</v-subheader>
 
-              <v-list-item v-for="item in dir" :key="item.name" :to="'/'+item.name">
+              <v-list-item
+                v-for="item in dir"
+                :key="item.name"
+                :to="'/' + item.name"
+              >
                 <v-list-item-avatar>
                   <v-icon>mdi-folder</v-icon>
                 </v-list-item-avatar>
@@ -18,7 +22,7 @@
                 </v-list-item-content>
 
                 <v-list-item-action v-if="typeof item.info != 'undefined'">
-                  <v-btn icon :to="'/'+item.info">
+                  <v-btn icon :to="'/' + item.info">
                     <v-icon color="grey lighten-1">mdi-information</v-icon>
                   </v-btn>
                 </v-list-item-action>

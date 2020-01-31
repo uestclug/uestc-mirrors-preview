@@ -2,9 +2,8 @@
   <div>
     <MainAppBar />
     <v-content>
-      <v-container class="fill-height" fluid>
-        <PrimaryView 
-        />
+      <v-container fluid>
+        <PrimaryView />
       </v-container>
     </v-content>
   </div>

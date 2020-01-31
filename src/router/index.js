@@ -1,9 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "@/views/Home";
-import Repo from "@/views/Repo"
-import Browse from "@/views/Browse"
-import ISO from "@/views/ISO"
+import Repo from "@/views/Repo";
+import Browse from "@/views/Browse";
+import ISO from "@/views/ISO";
 
 Vue.use(VueRouter);
 
@@ -14,7 +14,7 @@ const routes = [
     component: Home
   },
   {
-    path: "/repo/:reponame",
+    path: "/repo/:reponame/:tab?",
     name: "repo",
     component: Repo
   },
@@ -24,7 +24,7 @@ const routes = [
     component: Browse
   },
   {
-    path: "/downloadiso",
+    path: "/downloadiso/:repo?/:version?",
     name: "downloadiso",
     component: ISO
   }

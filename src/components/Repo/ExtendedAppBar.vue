@@ -12,7 +12,7 @@
       <v-icon>mdi-{{ repo.icon }}</v-icon> &nbsp;
       <span>{{ repo.name }}</span>
     </v-toolbar-title>
-    <Search/>
+    <Search />
     <v-spacer />
     <v-btn icon>
       <v-icon>mdi-apps</v-icon>
@@ -24,19 +24,16 @@
       <v-icon>mdi-palette</v-icon>
     </v-btn>
     <template v-slot:extension>
-      <v-btn color="primary" dark absolute bottom right fab to="/downloadiso">
-        <v-icon>mdi-download</v-icon>
-      </v-btn>
       <slot name="tabcontent" />
     </template>
   </v-app-bar>
 </template>
 <script>
-import Search from '@/components/layout/Search'
+import Search from "@/components/layout/Search";
 export default {
   name: "AppBar",
   components: {
-      Search
+    Search
   },
   data() {
     return {
