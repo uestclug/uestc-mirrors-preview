@@ -51,7 +51,7 @@ import repo from "@/assets/data/doc.json";
 export default {
   name: "repo",
   data: () => ({
-    tab: null
+    tab: "tab-home"
   }),
   components: { ExtendedAppBar, RepoDocView },
   computed: {
