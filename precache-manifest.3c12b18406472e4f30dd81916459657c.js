@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dfa3943d8860a6bd47fa",
-    "url": "/css/app.7b1e4061.css"
+    "revision": "401d86ae076b87143dc2",
+    "url": "/css/app.a31a68a8.css"
   },
   {
     "revision": "41a2b185733e7489ae90",
@@ -40,12 +40,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/doc/termux.md"
   },
   {
-    "revision": "9e5b18283c42ca0659c421d8f0cd2baf",
+    "revision": "9a43b540268e1019b8ceb17a0c226670",
     "url": "/index.html"
   },
   {
-    "revision": "dfa3943d8860a6bd47fa",
-    "url": "/js/app.c6172663.js"
+    "revision": "401d86ae076b87143dc2",
+    "url": "/js/app.799014a3.js"
   },
   {
     "revision": "41a2b185733e7489ae90",
