@@ -35,6 +35,7 @@ export default {
     },
     toggleDark() {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
+      localStorage.dark = this.$vuetify.theme.dark;
     }
   }
 };

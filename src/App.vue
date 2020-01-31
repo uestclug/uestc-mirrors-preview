@@ -16,6 +16,15 @@ export default {
   components: {
     NavigationDrawer,
     ColorPicker
+  },
+  mounted() {
+    if (localStorage.colortheme) {
+      this.$vuetify.theme.themes.light.primary = localStorage.colortheme;
+      this.$vuetify.theme.themes.dark.primary = localStorage.colortheme;
+    }
+    if (localStorage.dark) {
+      this.$vuetify.theme.dark = localStorage.dark;
+    }
   }
 };
 </script>

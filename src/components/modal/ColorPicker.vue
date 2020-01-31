@@ -20,6 +20,7 @@ export default {
         return this.$vuetify.theme.themes.light.primary;
       },
       set(val) {
+        localStorage.colortheme = val;
         this.$vuetify.theme.themes.light.primary = val;
         this.$vuetify.theme.themes.dark.primary = val;
       }
