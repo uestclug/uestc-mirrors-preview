@@ -6,7 +6,8 @@
     :items="dists"
     item-text="name"
     item-value="name"
-    solo-inverted
+    :solo-inverted="!this.$vuetify.theme.dark"
+    :solo="this.$vuetify.theme.dark"
     hide-details
     prepend-inner-icon="mdi-magnify"
     label="客官, 今天想来点什么?"

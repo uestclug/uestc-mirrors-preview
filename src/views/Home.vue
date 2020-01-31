@@ -4,6 +4,9 @@
     <v-content>
       <v-container fluid>
         <PrimaryView />
+        <v-footer>
+          <v-col class="text-center"> UESTC Mirrors &copy; {{ new Date().getFullYear() }} </v-col>
+        </v-footer>
       </v-container>
     </v-content>
   </div>

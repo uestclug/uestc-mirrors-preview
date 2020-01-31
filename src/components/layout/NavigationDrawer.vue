@@ -92,16 +92,22 @@
         </v-list-item>
       </v-list-group>
       <v-divider />
-      <div class="px-4 py-2 d-flex">
+      <v-footer>
         <span class="font-weight-light">Insider Preview v0.6.001</span>
-      </div>
+        <v-spacer />
+        <AboutView />
+      </v-footer>
     </template>
   </v-navigation-drawer>
 </template>
 <script>
 import repo from "@/assets/data/doc.json";
+import AboutView from "@/components/modal/AboutView";
 
 export default {
+  components: {
+    AboutView
+  },
   data: () => ({
     repo: repo
   }),

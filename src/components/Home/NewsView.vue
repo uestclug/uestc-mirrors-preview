@@ -29,6 +29,11 @@
           </v-list-item>
         </v-skeleton-loader>
       </v-list>
+      <v-divider/>
+      <v-card-actions>
+        <v-spacer />
+        <v-btn to="/status" text color="primary">镜像站状态</v-btn>
+      </v-card-actions>
     </v-card>
   </v-col>
 </template>
