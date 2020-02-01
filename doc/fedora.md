@@ -4,63 +4,25 @@ Fedora 默认使用 [Metalink](https://zh.fedoracommunity.org/2018/04/05/fedora-
 
 由于 Metalink 需要从国外的 Fedora 项目服务器上获取元信息，所以对于校园内网、无国外访问等特殊情况，metalink 并不适用，此时可以如下修改配置文件。
 
-Fedora 的软件源配置文件可以有多个，其中： 系统默认的 `fedora` 仓库配置文件为 `/etc/yum.repos.d/fedora.repo`，系统默认的 `updates` 仓库配置文件为 `/etc/yum.repos.d/fedora-updates.repo` 。将上述两个文件先做个备份，根据 Fedora 系统版本分别替换为下面内容，之后通过 `sudo dnf makecache` 命令更新本地缓存，即可使用 UESTC Mirrors 的软件源镜像。
+Fedora 的软件源配置文件可以有多个，其中： 系统默认的 `fedora` 仓库配置文件在`/etc/yum.repos.d/`下，首先对该文件夹备份。
 
-### Fedora 27 或更旧版本
-
-`fedora` 仓库 (/etc/yum.repos.d/fedora.repo)
-
-```
-[fedora]
-name=Fedora $releasever - $basearch
-failovermethod=priority
-baseurl=https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/$releasever/Everything/$basearch/os/
-enabled=1
-metadata_expire=28d
-gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
-skip_if_unavailable=False
+``` bash
+mkdir /etc/yum.repos.d/bak
+cp /etc/yum.repos.d/*.repo /etc/yum.repos.d/bak/
 ```
 
-`updates` 仓库 (/etc/yum.repos.d/fedora-updates.repo)
+然后修改为UESTC镜像
 
-```
-[updates]
-name=Fedora $releasever - $basearch - Updates
-failovermethod=priority
-baseurl=https://mirrors.tuna.tsinghua.edu.cn/fedora/updates/$releasever/$basearch/
-enabled=1
-gpgcheck=1
-metadata_expire=6h
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
-skip_if_unavailable=False
+``` bash
+sed -i  -e 's/^metalink/#metalink/g' \
+        -e 's/^#baseurl/baseurl/g' \
+        -e 's/http:/https:/g' \
+        -e 's/download*linux/mirrors.uestc.cn\/fedora/g' \
+        /etc/yum.repos.d/*.repo
 ```
 
-### Fedora 28 或更新版本
+最后更新本地缓存
 
-`fedora` 仓库 (/etc/yum.repos.d/fedora.repo)
-
-```
-[fedora]
-name=Fedora $releasever - $basearch
-failovermethod=priority
-baseurl=https://mirrors.tuna.tsinghua.edu.cn/fedora/releases/$releasever/Everything/$basearch/os/
-metadata_expire=28d
-gpgcheck=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
-skip_if_unavailable=False
-```
-
-`updates` 仓库 (/etc/yum.repos.d/fedora-updates.repo)
-
-```
-[updates]
-name=Fedora $releasever - $basearch - Updates
-failovermethod=priority
-baseurl=https://mirrors.tuna.tsinghua.edu.cn/fedora/updates/$releasever/Everything/$basearch/
-enabled=1
-gpgcheck=1
-metadata_expire=6h
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
-skip_if_unavailable=False
+``` bash
+dnf makecache
 ```

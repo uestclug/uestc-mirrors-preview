@@ -28,20 +28,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/doc/archlinuxcn.md"
   },
   {
-    "revision": "1ce5eb2718ed4e534ef9cfbfe819ff80",
+    "revision": "bae8a027277f08b67e534bdd0f071ac7",
     "url": "/doc/centos.md"
   },
   {
-    "revision": "504006e33a149cc5593098b470a63dfa",
+    "revision": "14177188f44d89de892ba1b3498d5a33",
     "url": "/doc/debian.md"
   },
   {
-    "revision": "0d93dc845f63d1b79df04f561d067603",
+    "revision": "e8a67e4cbdfa1967c451058d4aabf481",
     "url": "/doc/fedora.md"
   },
   {
     "revision": "c24ea9c4a84c17ee023762bf41994a72",
     "url": "/doc/termux.md"
+  },
+  {
+    "revision": "016aad7883a7483e7f78b7728a49dda9",
+    "url": "/doc/ubuntu.md"
   },
   {
     "revision": "d2a65f090cf3354cfbe68e93f5de90c1",
