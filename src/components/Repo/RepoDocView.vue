@@ -7,11 +7,13 @@
       type="article"
     >
       <VueShowdown :markdown="mdtext" v-if="!docerr" />
-      <v-row v-if="docerr" align="center" justify="center">
-        <v-btn :href="source" icon large target="_blank" v-on="on">
-          <v-icon large>mdi-selection-off</v-icon> </v-btn
-        ><span>哦豁，文档不见了</span>
-      </v-row>
+      <v-layout v-if="docerr">
+        <v-row align="center" justify="center">
+          <v-btn icon large target="_blank">
+            <v-icon large>mdi-selection-off</v-icon> </v-btn
+          ><span>哦豁，文档不见了</span>
+        </v-row>
+      </v-layout>
     </v-skeleton-loader>
   </v-card-text>
 </template>

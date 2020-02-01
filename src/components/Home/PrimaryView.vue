@@ -41,6 +41,7 @@
           v-for="repo_item in dists"
           :key="repo_item.name"
           :dist="repo_item"
+          :status="getStatus(repo_item.name)"
         />
       </v-row>
     </v-col>
@@ -59,7 +60,22 @@ export default {
     DistInfo
   },
   data: () => ({
-    dists: dists
-  })
+    dists: dists,
+    status: null
+  }),
+  methods: {
+    getStatus: function(dist_name){
+      if(this.status != null){
+        return this.status[dist_name]
+      }else{
+        return null
+      }
+    }
+  },
+  mounted: function() {
+    this.$ajax
+      .get("/data/status.json")
+      .then(response => (this.status = response.data));
+  }
 };
 </script>

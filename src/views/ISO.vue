@@ -2,7 +2,7 @@
   <div>
     <MainAppBar />
     <v-content>
-      <v-container class="fill-height" fluid>
+      <v-container fluid>
         <v-row>
           <v-col cols="12">
             <ISOWizard />

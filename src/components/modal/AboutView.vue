@@ -10,7 +10,7 @@
       <v-card-text>
         <v-row>
           <v-col cols="2" align-self="center"
-            ><v-img :src="logo" width="50px" :aspect-ratio="1"
+            ><v-img :src="logo" width="100%" :aspect-ratio="1"
           /></v-col>
           <v-col cols="10">
             <v-card-title class="headline lighten-2" primary-title>

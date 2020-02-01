@@ -24,7 +24,7 @@ const routes = [
     component: Browse
   },
   {
-    path: "/downloadiso/:repo?/:version?",
+    path: "/downloadiso/:repo?/:version?/:arch?",
     name: "downloadiso",
     component: ISO
   }

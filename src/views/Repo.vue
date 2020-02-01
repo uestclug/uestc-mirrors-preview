@@ -35,7 +35,29 @@
             :key="tabrepo.url"
             :value="'tab-' + tabrepo.url"
           >
-            <v-card><RepoDocView :doc="tabrepo.url"/></v-card>
+            <v-row>
+              <v-col cols="12">
+                <v-card-text
+                  >访问地址：<code
+                    >https://mirrors.uestc.cn/{{ tabrepo.url }}</code
+                  >
+                  <v-btn
+                    icon
+                    @click="copylink('https://mirrors.uestc.cn/' + tabrepo.url)"
+                  >
+                    <v-icon>mdi-content-copy</v-icon>
+                  </v-btn>
+                  <v-snackbar v-model="copyLinkBar">
+                    链接已复制
+                    <v-btn color="primary" text @click="copyLinkBar = false">
+                      关闭
+                    </v-btn>
+                  </v-snackbar>
+                </v-card-text>
+                <v-divider />
+                <RepoDocView :doc="tabrepo.url" />
+              </v-col>
+            </v-row>
           </v-tab-item>
         </v-tabs-items>
       </v-container>
@@ -51,7 +73,8 @@ import repo from "@/assets/data/doc.json";
 export default {
   name: "repo",
   data: () => ({
-    tab: "tab-home"
+    tab: "tab-home",
+    copyLinkBar: false
   }),
   components: { ExtendedAppBar, RepoDocView },
   computed: {
@@ -60,6 +83,10 @@ export default {
     }
   },
   methods: {
+    copylink(str) {
+      this.$copyText(str);
+      this.copyLinkBar = true;
+    },
     findRepos(str) {
       return repo.linux.find(obj => {
         return obj.id === str;

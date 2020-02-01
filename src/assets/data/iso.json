@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Arch Linux",
+    "icon": "arch",
+    "versions": [
+      {
+        "name": "2020.01.01",
+        "arch": {
+          "name": "x86_64",
+          "url": "/archlinux/iso/latest/archlinux-2020.01.01-x86_64.iso"
+        }
+      }
+    ]
+  }
+]
