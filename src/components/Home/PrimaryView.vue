@@ -9,7 +9,7 @@
         <v-card-subtitle class="text-center"
           >本站由电子科技大学Linux用户组及电子科技大学网管会共同提供。
           <br />
-          本站共收录了<b>114</b>个Linux发行版镜像和<b>514</b>个软件包镜像。</v-card-subtitle
+          本站共收录了<b>15</b>个Linux发行版镜像和<b>7</b>个软件包镜像。</v-card-subtitle
         >
         <v-card-actions class="justify-center">
           <v-btn color="primary" large outlined to="browse"
@@ -20,16 +20,16 @@
           >
         </v-card-actions>
         <v-card-actions class="justify-center">
-          <v-btn text icon color="grey">
+          <v-btn text icon color="grey" @click="window.open('https://github.com/uestclug' , '_blank')">
             <v-icon>mdi-github-circle</v-icon>
           </v-btn>
-          <v-btn text icon color="blue">
+          <v-btn text icon color="blue" @click="window.open('https://t.me/joinchat/LgGQ2VXKXVu9fJpOlNgSDA' , '_blank')">
             <v-icon>mdi-telegram</v-icon>
           </v-btn>
-          <v-btn text icon color="brown">
+          <v-btn text icon color="brown" @click="window.open('mailto:lug.uestc@gmail.com' , '_blank')">
             <v-icon>mdi-email</v-icon>
           </v-btn>
-          <v-btn text icon color="purple">
+          <v-btn text icon color="purple" @click="window.open('https://jq.qq.com/?_wv=1027&k=54iKK8Y' , '_blank')">
             <v-icon>mdi-qqchat</v-icon>
           </v-btn>
         </v-card-actions>
