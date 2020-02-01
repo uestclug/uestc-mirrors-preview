@@ -22,10 +22,10 @@
     </template>
     <template v-slot:item="{ item }">
       <v-list-item-avatar
-        color="indigo"
+        color="primary"
         class="headline font-weight-light white--text"
       >
-        <v-icon>mdi-{{ icon(item.icon) }}</v-icon>
+        <v-icon dark>mdi-{{ icon(item.icon) }}</v-icon>
       </v-list-item-avatar>
       <v-list-item-content>
         <v-list-item-title v-text="item.name"></v-list-item-title>

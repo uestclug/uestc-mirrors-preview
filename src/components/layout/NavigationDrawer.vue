@@ -65,7 +65,7 @@
       </v-list-item>
     </v-list-group>
     <template v-slot:append>
-      <v-list-group prepend-icon="mdi-application">
+      <v-list-group prepend-icon="mdi-dots-horizontal">
         <template v-slot:activator>
           <v-list-item-title>
             其他

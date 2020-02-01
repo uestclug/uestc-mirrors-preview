@@ -32,3 +32,4 @@ This repo is the building version of UESTC Mirrors.
 - [ ] Dist home view
 - [ ] Mirror conf for different versions selection
 - [X] Apply theme setting to local storage
+- [ ] SEO optimize.
