@@ -125,7 +125,7 @@ export default {
       e1: 1,
       isolist: isolist,
       dist_selected: null,
-      version_selected: null,
+      version_selected: null
     };
   },
 

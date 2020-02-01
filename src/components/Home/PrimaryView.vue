@@ -64,11 +64,11 @@ export default {
     status: null
   }),
   methods: {
-    getStatus: function(dist_name){
-      if(this.status != null){
-        return this.status[dist_name]
-      }else{
-        return null
+    getStatus: function(dist_name) {
+      if (this.status != null) {
+        return this.status[dist_name];
+      } else {
+        return null;
       }
     }
   },

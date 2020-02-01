@@ -20,7 +20,7 @@ Vue.use(VModal);
 Vue.use(VueShowdown, {
   flavor: "github"
 });
-VueClipboard.config.autoSetContainer = true
+VueClipboard.config.autoSetContainer = true;
 Vue.use(VueClipboard);
 
 Vue.config.productionTip = false;
