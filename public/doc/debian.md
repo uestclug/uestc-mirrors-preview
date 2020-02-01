@@ -1,6 +1,18 @@
 ## Debian 镜像使用帮助
 
-Debian 的软件源配置文件是 `/etc/apt/sources.list`。将系统自带的该文件做个备份，将该文件替换为下面内容，即可使用 UESTC Mirrors 的软件源镜像。
+首先备份`/etc/apt/sources.list`
+
+``` bash
+cp /etc/apt/sources.list /etc/apt/sources.list.bak
+```
+
+启用UESTC镜像源
+
+``` bash
+sed -i -E -e 's/http:/https:/g' \
+        -e 's/\/.*org/\/\/mirrors.uestc.cn/g' \
+        /etc/apt/sources.list
+```
 
 如果遇到无法拉取 https 源的情况，请先使用 http 源并安装：
 
