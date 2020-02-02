@@ -10,8 +10,8 @@ sudo cp /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak
 ``` bash
 sed -i  -e 's/mirrorlist/#mirrorlist/g'\
         -e 's/^#baseurl/baseurl/g' \
-        -e 's/http:/https:/g'
-        -e 's/mirror.centos.org/mirrors.uestc.cn/g'
+        -e 's/http:/https:/g' \
+        -e 's/mirror.centos.org/mirrors.uestc.cn/g' \
         /etc/yum.repos.d/CentOS-Base.repo
 ```
 
