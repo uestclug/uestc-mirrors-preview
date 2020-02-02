@@ -28,7 +28,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/doc/archlinuxcn.md"
   },
   {
-    "revision": "bae8a027277f08b67e534bdd0f071ac7",
+    "revision": "dc9a47585d7fef0885a3051eb9242a5d",
     "url": "/doc/centos.md"
   },
   {
@@ -36,8 +36,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/doc/debian.md"
   },
   {
-    "revision": "e8a67e4cbdfa1967c451058d4aabf481",
+    "revision": "d9dfd16b908f1cfbbf0a221fc1e2b2f4",
+    "url": "/doc/deepin.md"
+  },
+  {
+    "revision": "6bab68299fbb29c6bae0db331764d48b",
     "url": "/doc/fedora.md"
+  },
+  {
+    "revision": "12964b2db8b5699f329f560f639feb3e",
+    "url": "/doc/kali.md"
+  },
+  {
+    "revision": "8ddef8b09f17fb1065155071f22e9689",
+    "url": "/doc/opensuse.md"
   },
   {
     "revision": "c24ea9c4a84c17ee023762bf41994a72",

@@ -18,7 +18,7 @@ sed -i  -e 's/^metalink/#metalink/g' \
         -e 's/^#baseurl/baseurl/g' \
         -e 's/http:/https:/g' \
         -e 's/download*linux/mirrors.uestc.cn\/fedora/g' \
-        /etc/yum.repos.d/*.repo
+        /etc/yum.repos.d/fedora*.repo
 ```
 
 最后更新本地缓存
