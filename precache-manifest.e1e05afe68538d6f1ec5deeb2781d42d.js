@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "16ee75966802739ad025",
-    "url": "/css/app.96956143.css"
+    "revision": "eebb840e0843e3ae2a8a",
+    "url": "/css/app.c324ba12.css"
   },
   {
     "revision": "ea1fbde595e10094b70b",
@@ -44,6 +44,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/doc/fedora.md"
   },
   {
+    "revision": "71b0eafe516b29c285c3faa0a2d6201f",
+    "url": "/doc/home-archlinux.md"
+  },
+  {
     "revision": "12964b2db8b5699f329f560f639feb3e",
     "url": "/doc/kali.md"
   },
@@ -64,12 +68,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/logo.d2a65f09.png"
   },
   {
-    "revision": "8b9c27aa9c160dacf596a51680d50463",
+    "revision": "23e4aef3a0e4ce6dc2b69a74cd9005fa",
     "url": "/index.html"
   },
   {
-    "revision": "16ee75966802739ad025",
-    "url": "/js/app.a4b5d2a1.js"
+    "revision": "eebb840e0843e3ae2a8a",
+    "url": "/js/app.bed03012.js"
   },
   {
     "revision": "ea1fbde595e10094b70b",
