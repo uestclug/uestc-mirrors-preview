@@ -26,8 +26,22 @@
       <v-container fluid>
         <v-tabs-items v-model="tab">
           <v-tab-item value="tab-home">
-            <v-card style="height: 80vh;">
-              Test<br />Test<br />Test<br />Test<br />Test<br />Test<br />Test<br />Test<br />
+            <v-card>
+              <v-card-text v-if="typeof thisrepo.links != 'undefined'">
+                <v-row>
+                  <v-col
+                    v-for="link in thisrepo.links"
+                    :key="link.name"
+                    class="col-auto"
+                  >
+                    <v-btn text>
+                      <v-icon>mdi-link</v-icon>
+                      {{ link.name }}</v-btn
+                    ></v-col
+                  >
+                </v-row>
+              </v-card-text>
+              <RepoDocView :doc="'home-' + thisrepo.id" />
             </v-card>
           </v-tab-item>
           <v-tab-item

@@ -55,7 +55,18 @@
     {
       "name": "Arch Linux",
       "id": "archlinux",
+      "desc": "这里是关于发行版的介绍，没有的话就不显示。",
       "icon": "arch",
+      "links": [
+        {
+          "name": "主页",
+          "url": "https://www.archlinux.org"
+        },
+        {
+          "name": "Arch Wiki",
+          "url": "https://wiki.archlinux.org"
+        }
+      ],
       "dist_url": [
         {
           "name": "Repo",

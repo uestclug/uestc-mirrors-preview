@@ -8,9 +8,12 @@
     app
   >
     <v-app-bar-nav-icon @click.stop="toggleDrawer" />
-    <v-toolbar-title style="width: 300px" class="ml-0 pl-4">
+    <v-toolbar-title class="ml-0 pl-4">
       <v-icon>mdi-{{ repo.icon }}</v-icon> &nbsp;
       <span>{{ repo.name }}</span>
+      <v-card-subtitle v-if="typeof repo.desc != 'undefined'">{{
+        repo.desc
+      }}</v-card-subtitle>
     </v-toolbar-title>
     <Search />
     <v-spacer />

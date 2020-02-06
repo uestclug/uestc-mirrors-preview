@@ -20,16 +20,43 @@
           >
         </v-card-actions>
         <v-card-actions class="justify-center">
-          <v-btn text icon color="grey" @click="window.open('https://github.com/uestclug' , '_blank')">
+          <v-btn
+            text
+            icon
+            color="grey"
+            @click="window.open('https://github.com/uestclug', '_blank')"
+          >
             <v-icon>mdi-github-circle</v-icon>
           </v-btn>
-          <v-btn text icon color="blue" @click="window.open('https://t.me/joinchat/LgGQ2VXKXVu9fJpOlNgSDA' , '_blank')">
+          <v-btn
+            text
+            icon
+            color="blue"
+            @click="
+              window.open(
+                'https://t.me/joinchat/LgGQ2VXKXVu9fJpOlNgSDA',
+                '_blank'
+              )
+            "
+          >
             <v-icon>mdi-telegram</v-icon>
           </v-btn>
-          <v-btn text icon color="brown" @click="window.open('mailto:lug.uestc@gmail.com' , '_blank')">
+          <v-btn
+            text
+            icon
+            color="brown"
+            @click="window.open('mailto:lug.uestc@gmail.com', '_blank')"
+          >
             <v-icon>mdi-email</v-icon>
           </v-btn>
-          <v-btn text icon color="purple" @click="window.open('https://jq.qq.com/?_wv=1027&k=54iKK8Y' , '_blank')">
+          <v-btn
+            text
+            icon
+            color="purple"
+            @click="
+              window.open('https://jq.qq.com/?_wv=1027&k=54iKK8Y', '_blank')
+            "
+          >
             <v-icon>mdi-qqchat</v-icon>
           </v-btn>
         </v-card-actions>

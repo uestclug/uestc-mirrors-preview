@@ -5,10 +5,45 @@
     "versions": [
       {
         "name": "2020.01.01",
-        "arch": {
-          "name": "x86_64",
-          "url": "/archlinux/iso/latest/archlinux-2020.01.01-x86_64.iso"
-        }
+        "arch": [
+          {
+            "name": "x86_64",
+            "image": [
+              {
+                "type": "iso",
+                "file": "/archlinux/iso/latest/archlinux-2020.01.01-x86_64.iso"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Debain",
+    "icon": "debian",
+    "versions": [
+      {
+        "name": "10.2.0",
+        "arch": [
+          {
+            "name": "amd64",
+            "image": [
+              {
+                "type": "edu-iso-bd",
+                "file": "/debian-cd/10.2.0/amd64/iso-bd/debian-edu-10.2.0-amd64-BD-1.iso"
+              },
+              {
+                "type": "netinst-iso-cd",
+                "file": "/debian-cd/10.2.0/amd64/iso-cd/debian-10.2.0-amd64-netinst.iso"
+              },
+              {
+                "type": "xfce-iso-cd",
+                "file": "/debian-cd/10.2.0/amd64/iso-cd/debian-10.2.0-amd64-xfce-CD-1.iso"
+              }
+            ]
+          }
+        ]
       }
     ]
   }
