@@ -25,11 +25,11 @@ This repo is the building version of UESTC Mirrors.
 ## TODO
 
 - [ ] More documents
-- [ ] ISO Download
+- [x] ISO Download
 - [ ] News View
 - [ ] Status View
 - [x] Autorefresh update time and status
-- [ ] Dist home view
+- [x] Dist home view
 - [ ] Mirror conf for different versions selection
 - [X] Apply theme setting to local storage
 - [ ] SEO optimize.
