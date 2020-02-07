@@ -11,7 +11,7 @@
               <v-list-item
                 v-for="item in dir"
                 :key="item.name"
-                :to="'/' + item.name"
+                @click="gotoDir('/' + item.name)"
               >
                 <v-list-item-avatar>
                   <v-icon>mdi-folder</v-icon>
@@ -46,7 +46,12 @@ export default {
   components: { MainAppBar },
   data: () => ({
     dir: dir
-  })
+  }),
+  methods: {
+    gotoDir: function(dir) {
+      window.location.href = dir;
+    }
+  }
 };
 </script>
 <style lang="scss" scoped></style>

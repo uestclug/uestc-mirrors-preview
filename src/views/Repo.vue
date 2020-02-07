@@ -17,7 +17,16 @@
             >{{ dists.name }}</v-tab
           >
         </v-tabs>
-        <v-btn color="primary" dark absolute bottom right fab to="/downloadiso">
+        <v-btn
+          color="primary"
+          dark
+          absolute
+          v-if="typeof thisrepo.download != 'undefined'"
+          bottom
+          right
+          fab
+          :to="'/downloadiso/' + thisrepo.download"
+        >
           <v-icon>mdi-download</v-icon>
         </v-btn>
       </template>
@@ -49,29 +58,33 @@
             :key="tabrepo.url"
             :value="'tab-' + tabrepo.url"
           >
-            <v-row>
-              <v-col cols="12">
-                <v-card-text
-                  >访问地址：<code
-                    >https://mirrors.uestc.cn/{{ tabrepo.url }}</code
-                  >
-                  <v-btn
-                    icon
-                    @click="copylink('https://mirrors.uestc.cn/' + tabrepo.url)"
-                  >
-                    <v-icon>mdi-content-copy</v-icon>
-                  </v-btn>
-                  <v-snackbar v-model="copyLinkBar">
-                    链接已复制
-                    <v-btn color="primary" text @click="copyLinkBar = false">
-                      关闭
+            <v-card>
+              <v-row>
+                <v-col cols="12">
+                  <v-card-text
+                    >访问地址：<code
+                      >https://mirrors.uestc.cn/{{ tabrepo.url }}</code
+                    >
+                    <v-btn
+                      icon
+                      @click="
+                        copylink('https://mirrors.uestc.cn/' + tabrepo.url)
+                      "
+                    >
+                      <v-icon>mdi-content-copy</v-icon>
                     </v-btn>
-                  </v-snackbar>
-                </v-card-text>
-                <v-divider />
-                <RepoDocView :doc="tabrepo.url" />
-              </v-col>
-            </v-row>
+                    <v-snackbar v-model="copyLinkBar">
+                      链接已复制
+                      <v-btn color="primary" text @click="copyLinkBar = false">
+                        关闭
+                      </v-btn>
+                    </v-snackbar>
+                  </v-card-text>
+                  <v-divider />
+                  <RepoDocView :doc="tabrepo.url" />
+                </v-col>
+              </v-row>
+            </v-card>
           </v-tab-item>
         </v-tabs-items>
       </v-container>

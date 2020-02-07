@@ -55,7 +55,11 @@ export default {
   },
   watch: {
     searched() {
-      this.$router.push("/" + this.searched.info + "/" + this.searched.name);
+      if (this.searched.info.startsWith("app/")) {
+        this.$router.push("/" + this.searched.info);
+      } else {
+        this.$router.push("/" + this.searched.info + "/" + this.searched.name);
+      }
     }
   }
 };

@@ -24,7 +24,7 @@
             text
             icon
             color="grey"
-            @click="window.open('https://github.com/uestclug', '_blank')"
+            @click="openLink('https://github.com/uestclug')"
           >
             <v-icon>mdi-github-circle</v-icon>
           </v-btn>
@@ -32,12 +32,7 @@
             text
             icon
             color="blue"
-            @click="
-              window.open(
-                'https://t.me/joinchat/LgGQ2VXKXVu9fJpOlNgSDA',
-                '_blank'
-              )
-            "
+            @click="openLink('https://t.me/joinchat/LgGQ2VXKXVu9fJpOlNgSDA')"
           >
             <v-icon>mdi-telegram</v-icon>
           </v-btn>
@@ -45,7 +40,7 @@
             text
             icon
             color="brown"
-            @click="window.open('mailto:lug.uestc@gmail.com', '_blank')"
+            @click="openLink('mailto:lug.uestc@gmail.com')"
           >
             <v-icon>mdi-email</v-icon>
           </v-btn>
@@ -53,9 +48,7 @@
             text
             icon
             color="purple"
-            @click="
-              window.open('https://jq.qq.com/?_wv=1027&k=54iKK8Y', '_blank')
-            "
+            @click="openLink('https://jq.qq.com/?_wv=1027&k=54iKK8Y')"
           >
             <v-icon>mdi-qqchat</v-icon>
           </v-btn>
@@ -97,6 +90,9 @@ export default {
       } else {
         return null;
       }
+    },
+    openLink: function(link) {
+      window.location.href = link;
     }
   },
   mounted: function() {

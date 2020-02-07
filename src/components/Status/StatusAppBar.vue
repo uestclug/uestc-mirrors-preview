@@ -1,16 +1,8 @@
 <template>
-  <v-app-bar
-    shrink-on-scroll
-    prominent
-    elevate-on-scroll
-    color="primary"
-    :dark="true"
-    app
-  >
+  <v-app-bar elevate-on-scroll color="primary" :dark="true" app>
     <v-app-bar-nav-icon @click.stop="toggleDrawer" />
-    <v-toolbar-title class="ml-0 pl-4">
-      <v-icon>mdi-{{ repo.icon }}</v-icon> &nbsp;
-      <span>{{ repo.name }}</span>
+    <v-toolbar-title style="width: 300px" class="ml-0 pl-4">
+      <span>UESTC Mirrors</span>
     </v-toolbar-title>
     <Search />
     <v-spacer />
@@ -24,7 +16,7 @@
       <v-icon>mdi-palette</v-icon>
     </v-btn>
     <template v-slot:extension>
-      <slot name="tabcontent" />
+      <slot name="tab" />
     </template>
   </v-app-bar>
 </template>
@@ -39,21 +31,6 @@ export default {
     return {
       color: "#1CA085"
     };
-  },
-  props: ["repo"],
-  computed: {
-    thisrepo: function() {
-      if (this.$route.params.reponame != undefined) {
-        return this.findRepos(this.$route.params.reponame);
-      }
-      return [];
-    },
-    thisapp: function() {
-      if (this.$route.params.appname != undefined) {
-        return this.findApp(this.$route.params.reponame);
-      }
-      return [];
-    }
   },
   methods: {
     toggleDrawer() {

@@ -13,7 +13,7 @@
     },
     {
       "name": "F-droid",
-      "id": "anthon",
+      "id": "f-droid",
       "icon": "cellphone-android",
       "url": "f-droid"
     },
@@ -55,8 +55,8 @@
     {
       "name": "Arch Linux",
       "id": "archlinux",
-      "desc": "这里是关于发行版的介绍，没有的话就不显示。",
       "icon": "arch",
+      "download": "archlinux",
       "links": [
         {
           "name": "主页",

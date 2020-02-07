@@ -2,7 +2,9 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "@/views/Home";
 import Repo from "@/views/Repo";
+import App from "@/views/App";
 import Browse from "@/views/Browse";
+import Status from "@/views/Status";
 import ISO from "@/views/ISO";
 
 Vue.use(VueRouter);
@@ -19,9 +21,19 @@ const routes = [
     component: Repo
   },
   {
+    path: "/app/:appname/:tab?",
+    name: "app",
+    component: App
+  },
+  {
     path: "/browse",
     name: "browse",
     component: Browse
+  },
+  {
+    path: "/status/:tab?",
+    name: "status",
+    component: Status
   },
   {
     path: "/downloadiso/:repo?/:version?/:arch?",

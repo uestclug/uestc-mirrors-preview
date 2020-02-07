@@ -149,7 +149,7 @@
             <code>{{ downloadLink(file_selected) }}</code>
           </v-card-text>
         </v-row>
-        <v-btn color="success" :to="'/' + downloadLink(file_selected)"
+        <v-btn color="success" @click="isodown(downloadLink(file_selected))"
           ><v-icon>mdi-download</v-icon>点击下载</v-btn
         >
         <v-btn text @click="prevStep(5)">返回</v-btn>
@@ -171,7 +171,7 @@ export default {
       file_selected: null
     };
   },
-
+  props: ["req"],
   watch: {
     steps(val) {
       if (this.e1 > val) {
@@ -180,6 +180,9 @@ export default {
     }
   },
   methods: {
+    isodown: function(url) {
+      window.location.href = url;
+    },
     icon: function(dist) {
       if (typeof dist != "undefined") {
         return "mdi-" + dist;
@@ -211,6 +214,7 @@ export default {
       }
       this.e1 = n - 1;
     }
-  }
+  },
+  mounted: function() {}
 };
 </script>
