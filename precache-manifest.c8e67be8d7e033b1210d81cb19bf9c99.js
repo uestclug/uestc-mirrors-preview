@@ -52,8 +52,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/doc/kali.md"
   },
   {
+    "revision": "abe25f95f413e0c642483bc76b78ac3b",
+    "url": "/doc/nginx.md"
+  },
+  {
     "revision": "8ddef8b09f17fb1065155071f22e9689",
     "url": "/doc/opensuse.md"
+  },
+  {
+    "revision": "16ccf39f0917985162d6ce4627478960",
+    "url": "/doc/proxmox.md"
   },
   {
     "revision": "c24ea9c4a84c17ee023762bf41994a72",
