@@ -7,7 +7,8 @@ export default new Vuex.Store({
   actions: {},
   modules: {},
   state: {
-    drawerShow: false
+    drawerShow: false,
+    colorShow: false
   },
   mutations: {
     toggleDrawer(state) {
@@ -15,6 +16,9 @@ export default new Vuex.Store({
     },
     updateDrawer(state, val) {
       state.drawerShow = val;
+    },
+    updateColor(state, val) {
+      state.colorShow = val;
     }
   }
 });

@@ -22,7 +22,7 @@ export default {
       this.$vuetify.theme.themes.light.primary = localStorage.colortheme;
       this.$vuetify.theme.themes.dark.primary = localStorage.colortheme;
     }
-    if (localStorage.dark) {
+    if (typeof localStorage.dark != "undefined") {
       this.$vuetify.theme.dark = localStorage.dark;
     }
   }

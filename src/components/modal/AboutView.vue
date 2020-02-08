@@ -27,9 +27,9 @@
         使用者共同发起并运营的开放性组织，旨在宣传自由软件精神，为校内外
         GNU/Linux 爱好者提供活动的平台和机会，并为校内外用户提供便利。
         <v-card-subtitle><b>授权和鸣谢</b></v-card-subtitle>
-        本镜像在文档上借鉴了<a href="https://mirrors.tuna.tsinghua.edu.cn/"
-          >TUNA Mirrors</a
-        >的部分内容。<br />
+        本镜像在文档上借鉴了
+        <a href="https://mirrors.tuna.tsinghua.edu.cn/">TUNA Mirrors</a>
+        的部分内容。<br />
         本镜像目前在内部开发阶段，公开测试时将公布源码。
       </v-card-text>
 

@@ -6,7 +6,7 @@
       height="100vh"
       type="article"
     >
-      <VueShowdown :markdown="mdtext" v-if="!docerr" />
+      <VueShowdown class="mdtext" :markdown="mdtext" v-if="!docerr" />
       <v-layout v-if="docerr">
         <v-row align="center" justify="center">
           <v-btn icon large target="_blank">
@@ -36,3 +36,9 @@ export default {
   }
 };
 </script>
+<style lang="scss">
+.mdtext code {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+}
+</style>

@@ -1,22 +1,27 @@
 <template>
   <v-row>
-    <v-col cols="12">
-      <v-card class="">
+    <v-col cols="12" md="8" sm="6">
+      <v-card>
         <v-card-title class="headline justify-center"
-          >UESTC 镜像站</v-card-title
+          >电子科技大学开源镜像站</v-card-title
         >
 
         <v-card-subtitle class="text-center"
-          >本站由电子科技大学Linux用户组及电子科技大学网管会共同提供。
+          >本站由电子科技大学 Linux 用户组及电子科技大学网管会共同提供。
           <br />
-          本站共收录了<b>15</b>个Linux发行版镜像和<b>7</b>个软件包镜像。</v-card-subtitle
+          本站共收录了 <b>15</b> 个 Linux 发行版镜像和&nbsp;
+          <b>7</b> 个软件包镜像。</v-card-subtitle
         >
+      </v-card>
+    </v-col>
+    <v-col cols="12" md="4" sm="6">
+      <v-card>
         <v-card-actions class="justify-center">
           <v-btn color="primary" large outlined to="browse"
             ><v-icon>mdi-folder</v-icon>浏览目录</v-btn
           >
           <v-btn color="primary" large outlined to="downloadiso"
-            ><v-icon>mdi-album</v-icon>下载ISO</v-btn
+            ><v-icon>mdi-album</v-icon>下载 ISO</v-btn
           >
         </v-card-actions>
         <v-card-actions class="justify-center">

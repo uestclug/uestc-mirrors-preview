@@ -26,7 +26,7 @@
       v-if="typeof repo.linux != 'undefined'"
     >
       <template v-slot:activator>
-        <v-list-item-title> Linux发行版 </v-list-item-title>
+        <v-list-item-title> Linux 发行版 </v-list-item-title>
       </template>
 
       <v-list-item
@@ -82,7 +82,7 @@
           <v-list-item-icon>
             <v-icon>mdi-album</v-icon>
           </v-list-item-icon>
-          <v-list-item-title>下载ISO</v-list-item-title>
+          <v-list-item-title>下载 ISO</v-list-item-title>
         </v-list-item>
         <v-list-item to="/browse">
           <v-list-item-icon>

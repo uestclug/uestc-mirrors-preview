@@ -75,7 +75,7 @@ export default {
           return "应用程序";
         }
         if (this.dist.info.startsWith("repo")) {
-          return "Linux发行版";
+          return "Linux 发行版";
         }
         return "未知";
       } else {
