@@ -12,9 +12,6 @@
           <v-tab href="#tab-home">简介</v-tab>
           <v-tab href="#tab-download">下载</v-tab>
         </v-tabs>
-        <v-btn color="primary" dark absolute bottom right fab to="/downloadiso">
-          <v-icon>mdi-download</v-icon>
-        </v-btn>
       </template>
     </ExtendedAppBar>
     <v-content>

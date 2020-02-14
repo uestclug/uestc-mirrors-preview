@@ -25,17 +25,17 @@ export default {
         "#9C27B0",
         "#673AB7",
         "#3F51B5",
-        "#2196F3",
+        "#1793D1", //arch
         "#03A9F4",
         "#00BCD4",
         "#009688",
-        "#4CAF50",
+        "#34BE5B", //manjaro
         "#8BC34A",
         "#CDDC39",
         "#FFEB3B",
         "#FFC107",
         "#FF9800",
-        "#FF5722",
+        "#DD4814", //ubuntu
         "#795548",
         "#9E9E9E",
         "#607D8B",
@@ -67,7 +67,10 @@ export default {
   methods: {
     getColorName(c) {
       if (c == "#D77051") return "(Maki 红)";
-      if (c == "#CC4272") return "(经典红)";
+      if (c == "#CC4272") return "(Debian 红) (经典红)";
+      if (c == "#1793D1") return "(Arch 蓝)";
+      if (c == "#34BE5B") return "(Manjaro 绿)";
+      if (c == "#DD4814") return "(Ubuntu 橙)";
       return "";
     }
   },

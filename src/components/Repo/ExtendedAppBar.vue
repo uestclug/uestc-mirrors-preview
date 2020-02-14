@@ -14,13 +14,11 @@
     </v-toolbar-title>
     <Search />
     <v-spacer />
-    <v-btn icon>
-      <v-icon>mdi-apps</v-icon>
-    </v-btn>
+    <FunctionPopup />
     <v-btn @click="toggleDark" icon>
       <v-icon>mdi-invert-colors</v-icon>
     </v-btn>
-    <v-btn @click="$modal.show('color-picker-ui')" icon>
+    <v-btn @click="toggleColorShow" icon>
       <v-icon>mdi-palette</v-icon>
     </v-btn>
     <template v-slot:extension>
@@ -29,11 +27,13 @@
   </v-app-bar>
 </template>
 <script>
+import FunctionPopup from "@/components/layout/FunctionPopup";
 import Search from "@/components/layout/Search";
 export default {
   name: "AppBar",
   components: {
-    Search
+    Search,
+    FunctionPopup
   },
   data() {
     return {
@@ -62,6 +62,9 @@ export default {
     toggleDark() {
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
       localStorage.dark = this.$vuetify.theme.dark;
+    },
+    toggleColorShow() {
+      this.$store.commit("updateColor", !this.$store.state.colorShow);
     }
   }
 };

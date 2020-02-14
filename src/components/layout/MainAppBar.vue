@@ -6,9 +6,7 @@
     </v-toolbar-title>
     <Search />
     <v-spacer />
-    <v-btn icon>
-      <v-icon>mdi-apps</v-icon>
-    </v-btn>
+    <FunctionPopup />
     <v-btn @click="toggleDark" icon>
       <v-icon>mdi-invert-colors</v-icon>
     </v-btn>
@@ -18,11 +16,13 @@
   </v-app-bar>
 </template>
 <script>
+import FunctionPopup from "@/components/layout/FunctionPopup";
 import Search from "@/components/layout/Search";
 export default {
   name: "AppBar",
   components: {
-    Search
+    Search,
+    FunctionPopup
   },
   data() {
     return {
