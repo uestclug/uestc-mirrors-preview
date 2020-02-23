@@ -1,5 +1,7 @@
 # UESTC Mirrors Insider Preview
 
+# This project is now moved to [GitLab](https://gitlab.com/uestclug/uestc-mirrors-preview)
+
 ## Info
 
 This repo is the building version of UESTC Mirrors.
